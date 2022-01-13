@@ -47,7 +47,7 @@ data "google_client_config" "default" {}
 
 data "google_container_cluster" "my_cluster" {
   name     = data.terraform_remote_state.cluster.outputs.cluster
-  location = data.terraform_remote_state.cluster.outputs.region
+  location = "us-central1-a"
 }
 
 provider "kubernetes" {
